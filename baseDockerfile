@@ -1,0 +1,5 @@
+FROM cypress/browsers:node12.13.0-chrome80-ff74
+RUN mkdir /workdir
+WORKDIR /workdir
+COPY package.json /workdir/package.json
+RUN npm install cypress --save --dev
